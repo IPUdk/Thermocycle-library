@@ -42,16 +42,15 @@ ThermoCycle.Components.HeatFlow.HeatTransfer.MassFlowDependence
 constrainedby
     ThermoCycle.Components.HeatFlow.HeatTransfer.BaseClasses.PartialHeatTransferZones
     "Convective heat transfer"                                                         annotation (choicesAllMatching = true);
-HeatTransfer heatTransfer( redeclare final package Medium = Medium,
-final n=1,
-final Mdotnom = Mdotnom/Nt,
-final Unom_l = Unom,
-final Unom_tp = Unom,
-final Unom_v = Unom,
-final M_dot = M_dot,
-final x = 0,
-final FluidState={fluidState})
-                          annotation (Placement(transformation(extent={{-12,-14},
+HeatTransfer heatTransfer(redeclare package Medium = Medium,
+n=1,
+Mdotnom = Mdotnom/Nt,
+Unom_l = Unom,
+Unom_tp = Unom,
+Unom_v = Unom,
+M_dot = M_dot,
+x = 0,
+FluidState={fluidState})  annotation (Placement(transformation(extent={{-12,-14},
             {8,6}})));
 /***************  VARIABLES ******************/
   Medium.ThermodynamicState  fluidState;

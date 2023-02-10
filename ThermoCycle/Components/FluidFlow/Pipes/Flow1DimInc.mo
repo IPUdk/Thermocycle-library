@@ -73,7 +73,7 @@ constrainedby
  ThermoCycle.Components.FluidFlow.Pipes.Cell1DimInc
         Cells[N](
     redeclare package Medium = Medium,
-    redeclare each final model HeatTransfer = Flow1DimIncHeatTransferModel,
+    redeclare each model HeatTransfer = Flow1DimIncHeatTransferModel,
     each Vi=V/N,
     each Ai=A/N,
     each Nt=Nt,
