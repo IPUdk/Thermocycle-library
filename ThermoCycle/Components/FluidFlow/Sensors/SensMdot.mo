@@ -6,10 +6,10 @@ model SensMdot "Mass Flowrate sensor for working fluid"
     Modelica.Media.Interfaces.PartialMedium "Medium Model" annotation (choicesAllMatching = true);
   Modelica.Blocks.Interfaces.RealOutput Mdot annotation (Placement(
         transformation(extent={{60,40},{100,80}}, rotation=0)));
-  Interfaces.Fluid.FlangeA InFlow( m_flow(min=0),redeclare package Medium = Medium)
+  Interfaces.Fluid.FlangeA InFlow(redeclare package Medium = Medium)
                 annotation (Placement(transformation(extent={{-50,-50},{-30,-30}}),
         iconTransformation(extent={{-50,-50},{-30,-30}})));
-  Interfaces.Fluid.FlangeB OutFlow(m_flow(min=0), redeclare package Medium = Medium)
+  Interfaces.Fluid.FlangeB OutFlow(redeclare package Medium = Medium)
                  annotation (Placement(transformation(extent={{30,-50},{50,-30}}),
         iconTransformation(extent={{30,-50},{50,-30}})));
 equation

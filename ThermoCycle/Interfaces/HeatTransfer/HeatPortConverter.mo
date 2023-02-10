@@ -1,9 +1,9 @@
 within ThermoCycle.Interfaces.HeatTransfer;
 model HeatPortConverter "Convert thermal port into heat port"
   parameter Integer N = 10;
-  Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a heatPort
+  Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a[N] heatPort
     annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
-  ThermalPortL thermalPortL annotation (Placement(transformation(extent={{95,-5},
+  ThermalPortL[N] thermalPortL annotation (Placement(transformation(extent={{95,-5},
             {105,5}}), iconTransformation(extent={{90,-10},{110,10}})));
   parameter Modelica.Units.SI.Area A=1 "Heat exchange area";
 equation
